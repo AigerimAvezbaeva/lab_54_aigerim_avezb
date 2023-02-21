@@ -1,0 +1,76 @@
+[
+{
+  "model": "products_app.category",
+  "pk": 1,
+  "fields": {
+    "title": "Smartphones",
+    "description": "Smartphones is a portable computer devices"
+  }
+},
+{
+  "model": "products_app.category",
+  "pk": 2,
+  "fields": {
+    "title": "Earphones",
+    "description": ""
+  }
+},
+{
+  "model": "products_app.category",
+  "pk": 10,
+  "fields": {
+    "title": "TV",
+    "description": "Televisions"
+  }
+},
+{
+  "model": "products_app.category",
+  "pk": 11,
+  "fields": {
+    "title": "Laptop",
+    "description": "brands: Apple, Acer, Asus, hp, etc"
+  }
+},
+{
+  "model": "products_app.product",
+  "pk": 2,
+  "fields": {
+    "name": "apple iphone",
+    "description": "for sale",
+    "category": 10,
+    "created_at": "2023-02-20",
+    "price": "1200.00",
+    "photo": ""
+  }
+},
+{
+  "model": "products_app.product",
+  "pk": 3,
+  "fields": {
+    "name": "iphone 12",
+    "description": "for sale",
+    "category": 1,
+    "created_at": "2023-02-20",
+    "price": "120.00",
+    "photo": "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hc3/hde/67236399153182/acer-nitro-5-an515-57-nh-qeker-004-chernyi-108194028-1.jpg"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$rQun9fAc6ybONmwKtFCpHe$oHoBEW74Ee5B0qAdg18VcMBo8x/MYQ/2Hrh4ashikBA=",
+    "last_login": "2023-02-20T18:08:26.315Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-20T18:07:56.594Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
