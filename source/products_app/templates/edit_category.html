@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Update Category
+{% endblock %}
+{% block content %}
+<main class="main">
+    <div class="container">
+        <div class="card">
+            <form action="{% url 'edit_category' category.pk %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+
+                <div class="form_row">
+                    <input type="submit" value="Update category" class="submit-button">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

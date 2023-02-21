@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Category
+{% endblock %}
+
+{% block content %}
+
+<main class="main">
+    <div class="container">
+        {% for category in categories %}
+        <div class="cat-card">
+            {{ category.title }}
+            <a href="{% url 'delete_category' category.pk %}">Delete</a>
+            <a href="{% url 'edit_category' category.pk  %}">Edit</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
