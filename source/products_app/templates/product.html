@@ -7,21 +7,19 @@ Product
 
 <main class="main">
     <div class="container">
-    <div class="card">
-        <div class="card-photo">
-
-        </div>
-        <div class="card-desc">
-            <img src="{{ product.photo }}"/>
+    <div class="card pro">
+        <div class="item-image pro-card">
+            <img src="{{ product.photo }}"/></div>
+        <div class="desc-product">
         <h1>{{ product.name }}</h1>
         <p>{{ product.category }}</p>
         <h2>Price: {{ product.price }}</h2>
-        <h3 class="par">
-            <br> <b class="par-title"> {{ product.description }}</b>
-        </h3>
+        <h3 class="par-title">{{ product.description }}</h3>
         <p>added: {{ product.created_at }}</p>
-            <a href="{% url 'delete_product' product.pk %}">Delete</a>
-            <a href="{% url 'edit_product' product.pk  %}">Edit</a>
+            <div class="cat-card-links pro-version">
+                <div><a href="{% url 'edit_product' product.pk  %}" class="submit-button edit">Edit</a></div>
+                <div><a href="{% url 'delete_product' product.pk %}" class="submit-button del">Delete</a></div>
+            </div>
         </div>
     </div>
 

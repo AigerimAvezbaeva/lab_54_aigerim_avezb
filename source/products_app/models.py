@@ -1,7 +1,9 @@
 from django.db import models
+from django.db.models import TextChoices
 
 
 # Create your models here.
+
 class Category(models.Model):
     title = models.CharField(max_length=400, blank=False, null=False, verbose_name='Наименование категории')
     description = models.TextField(max_length=3000, blank=False, null=True, verbose_name='Описание')

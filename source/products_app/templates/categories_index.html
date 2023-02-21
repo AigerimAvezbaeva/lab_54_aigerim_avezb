@@ -7,13 +7,18 @@ Category
 
 <main class="main">
     <div class="container">
+
         {% for category in categories %}
-        <div class="cat-card">
-            {{ category.title }}
-            <a href="{% url 'delete_category' category.pk %}">Delete</a>
-            <a href="{% url 'edit_category' category.pk  %}">Edit</a>
+        <div class="card category">
+            <div class="cat-card">
+                {{ category.title }}
+            </div>
+            <div class="cat-card-links">
+                <div><a href="{% url 'edit_category' category.pk  %}" class="submit-button edit">Edit</a></div>
+                <div><a href="{% url 'delete_category' category.pk %}" class="submit-button del">Delete</a></div>
+            </div>
         </div>
         {% endfor %}
-    </div>
 
+    </div>
     {% endblock %}

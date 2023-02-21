@@ -5,10 +5,24 @@ Update Product
 {% block content %}
 <main class="main">
     <div class="container">
-        <div class="card">
+        <div class="card pro">
             <form action="{% url 'edit_product' product.pk %}" method="post">
                 {% csrf_token %}
-                {{ form }}
+                <div>
+                    {% for field in form %}
+                    <div class="form-group">
+                        {{field.label_tag}}
+                        <div>{{field}}</div>
+                        {% if field.errors%}
+                        {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            {{error}}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
 
                 <div class="form_row">
                     <input type="submit" value="Update Product" class="submit-button">
